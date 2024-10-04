@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="student" class="com.myorganisation.ioc.Student">
+        <property name="name" value="Aman" />
+        <property name="age" value="24" />
+    </bean>
+
+    <bean id="address" class="com.myorganisation.ioc.Address">
+        <property name="country" value="Bharat" />
+    </bean>
+
+    <bean id="employee" class="com.myorganisation.ioc.Employee" autowire="byName">
+        <property name="id" value="101" />
+        <property name="name" value="Abhishek Gupta" />
+    </bean>
+
+</beans>
