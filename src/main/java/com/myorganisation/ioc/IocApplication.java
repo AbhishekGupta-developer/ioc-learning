@@ -27,6 +27,12 @@ public class IocApplication {
 		System.out.println(employee1.getName());
 		System.out.println(employee1.getAddress().getCountry());
 
+		ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("App.xml");
+		Book book = (Book) applicationContext2.getBean("book");
+
+		System.out.println(book.getBookId());
+		System.out.println(book.getBookName());
+
 	}
 
 }

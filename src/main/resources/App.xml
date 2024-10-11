@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
     <bean id="student" class="com.myorganisation.ioc.Student">
@@ -17,6 +16,11 @@
     <bean id="employee" class="com.myorganisation.ioc.Employee" autowire="byName">
         <property name="id" value="101" />
         <property name="name" value="Abhishek Gupta" />
+    </bean>
+
+    <bean id="book" class="com.myorganisation.ioc.Book">
+        <constructor-arg value="10" type="int"></constructor-arg>
+        <constructor-arg value="Wings of Fire" type="String"></constructor-arg>
     </bean>
 
 </beans>
